@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+  color: black;
+  background-color: grey;
+}
+
+.container {
+  text-align: center;
+  margin: 10px;
+  width: 30%;
+  padding: 10px 10px 30px;
+  border-radius: 5px;
+  border: 1px white solid;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+}
