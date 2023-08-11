@@ -7,7 +7,7 @@ function splitfn() {
   let str2 = str.split("|");
   let newP = document.createElement("p");
   newP.innerHTML =
-    str2[4] + "  -  " + str2[2] + "  -  " + str2[10] + "  -  Qty: " + str[12];
+    str2[4] + "  -  " + str2[2] + "  -  " + str2[10] + "  -  Qty: " + str2[12];
   outputEl.appendChild(newP);
   inputEl.value = "";
 }
