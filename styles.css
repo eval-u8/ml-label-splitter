@@ -7,7 +7,7 @@ body {
 .container {
   text-align: center;
   margin: 10px;
-  width: 30%;
+  width: 40%;
   padding: 10px 10px 30px;
   border-radius: 5px;
   border: 1px white solid;
@@ -15,6 +15,7 @@ body {
 
 input {
   border: none;
+  width: 50%;
   border-radius: 5px;
 }
 
