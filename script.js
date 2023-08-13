@@ -1,10 +1,9 @@
-let inputEl = document.getElementById("input-el");
-let outputEl = document.getElementById("output-el");
+const inputEl = document.getElementById("input-el");
+const outputEl = document.getElementById("output-el");
 
 function splitfn() {
-  // outputEl.innerHTML = "";
-  let str = inputEl.value;
-  let str2 = str.split("|");
+  const str = inputEl.value;
+  const str2 = str.split("|");
   let newP = document.createElement("p");
   newP.innerHTML =
     str2[4] + "  -  " + str2[2] + "  -  " + str2[10] + "  -  Qty: " + str2[12];
