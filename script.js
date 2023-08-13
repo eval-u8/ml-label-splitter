@@ -4,11 +4,18 @@ const outputEl = document.getElementById("output-el");
 function splitfn() {
   const str = inputEl.value;
   const str2 = str.split("|");
-  let newP = document.createElement("p");
-  newP.innerHTML =
-    str2[4] + "  -  " + str2[2] + "  -  " + str2[10] + "  -  Qty: " + str2[12];
-  outputEl.appendChild(newP);
+  outputEl.innerHTML +=
+    "<li>" +
+    str2[4] +
+    "  -  " +
+    str2[2] +
+    "  -  " +
+    str2[10] +
+    "  -  Qty: " +
+    str2[12].slice(0, -6) +
+    "</li>";
   inputEl.value = "";
+  // Check labels with larger than 1 digit quantities to update the slice function above, to make it more readable
 }
 
 function clearContent() {
