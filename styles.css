@@ -1,10 +1,14 @@
 body {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: black;
   background-color: grey;
 }
 
 .container {
+  display: flex;
+}
+
+.seccion {
   text-align: center;
   margin: 10px;
   width: 550px;
@@ -14,14 +18,17 @@ body {
 }
 
 input {
-  border: none;
+  border: 2px solid black;
   width: 50%;
+  padding: 5px 0;
   border-radius: 5px;
 }
 
 button {
-  border-radius: 10px;
-  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 2px solid black;
+  font-family: "Open Sans", sans-serif;
 }
 
 li {
@@ -34,4 +41,12 @@ footer {
   left: 0;
   width: 550px;
   text-align: center;
+}
+
+.parts {
+  background-color: lightblue;
+}
+
+.crates {
+  background-color: lightseagreen;
 }
