@@ -45,8 +45,10 @@ footer {
 
 .parts {
   background-color: lightblue;
+  align-self: flex-start;
 }
 
 .crates {
   background-color: lightseagreen;
+  align-self: flex-start;
 }
