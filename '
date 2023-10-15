@@ -62,7 +62,7 @@ function splitCrateFn() {
   if (str2.length < 2) {
     return;
   }
-  outputCrateEl.innerHTML += "<li>" + str2[2] + "</li>";
+  outputCrateEl.innerHTML += "<li>" + str2[3] + "</li>";
   crateInput.value = "";
 }
 
