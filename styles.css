@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: black;
   background-color: grey;
 }
@@ -25,9 +25,10 @@ input {
 }
 
 button {
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 5px 10px;
   border: 2px solid black;
+  font-family: "Open Sans", sans-serif;
 }
 
 li {
