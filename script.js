@@ -59,7 +59,6 @@ splitCrateBtn.addEventListener("click", splitCrateFn);
 function splitCrateFn() {
   const str = crateInput.value;
   const str2 = str.split("|");
-  console.log(str2);
   if (str2.length < 2) {
     return;
   }
