@@ -18,16 +18,17 @@ function splitPartFn() {
   if (str2.length < 2) {
     return;
   }
-  outputPartEl.innerHTML +=
-    "<li>" +
+
+  const newPartLine = document.createElement("li");
+  newPartLine.textContent =
     str2[4] +
     "  -  " +
     str2[2] +
     "  -  " +
     str2[10] +
     "  -  Qty: " +
-    str2[12].slice(0, -6) +
-    "</li>";
+    Number(str2[12].split(".")[0]).toLocaleString("en-US");
+  outputPartEl.appendChild(newPartLine);
   partInput.value = "";
 }
 
@@ -62,7 +63,9 @@ function splitCrateFn() {
   if (str2.length < 2) {
     return;
   }
-  outputCrateEl.innerHTML += "<li>" + str2[2] + "</li>";
+  const newCrateLine = document.createElement("li");
+  newCrateLine.textContent = str2[2];
+  outputCrateEl.appendChild(newCrateLine);
   crateInput.value = "";
 }
 
