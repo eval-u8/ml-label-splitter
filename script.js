@@ -13,8 +13,13 @@ const outputCrateEl = document.getElementById("output-crate-el");
 
 splitPartBtn.addEventListener("click", splitPartFn);
 
+function sanitizeInput(input) {
+  // Replace '<' and '>' characters with their HTML entities
+  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
 function splitPartFn() {
-  const str = partInput.value;
+  const str = sanitizeInput(partInput.value);
   if (refInput.value) {
     document.getElementById("output-part-header").textContent =
       refInput.value.toUpperCase();
@@ -25,15 +30,10 @@ function splitPartFn() {
     return;
   }
 
-  const newPartLine = document.createElement("li");
-  newPartLine.textContent =
-    str2[4] +
-    "  -  " +
-    str2[2] +
-    "  -  " +
-    str2[10] +
-    "  -  Qty: " +
-    Number(str2[12].split(".")[0]).toLocaleString("en-US");
+  const newPartLine = document.createElement("tr");
+  newPartLine.innerHTML = `<td>${str2[4]}</td><td>${str2[2]}</td><td>${
+    str2[10]
+  }</td><td>${Number(str2[12].split(".")[0]).toLocaleString("en-US")}</td>`;
   outputPartEl.appendChild(newPartLine);
   partInput.value = "";
 }
