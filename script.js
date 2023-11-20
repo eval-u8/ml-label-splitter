@@ -45,7 +45,9 @@ clearPartBtn.addEventListener("click", function () {
 
 const copyPart = async () => {
   try {
-    await navigator.clipboard.writeText(outputPartEl.innerText);
+    await navigator.clipboard.writeText(
+      document.querySelector(".output-div").innerText,
+    );
     alert("Content copied to clipboard");
   } catch (err) {
     console.error("Failed to copy: ", err);
@@ -81,7 +83,6 @@ function splitCrateFn() {
 
 clearCrateBtn.addEventListener("click", function () {
   outputCrateEl.innerHTML = "";
-  // crateInput.value = "";
 });
 
 const copyCrate = async () => {
