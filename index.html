@@ -3,6 +3,7 @@
   <head>
     <title>ML - Label Splitter</title>
     <meta charset="UTF-8" />
+    <link rel="icon" href="site_icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,22 +17,47 @@
     <div class="container">
       <div class="seccion parts">
         <h2>Part label Splitter</h2>
-        <input type="text" name="input" value="" id="part-input" />
-        <button id="split-part-btn">Split</button>
-        <button id="clear-part-btn">Clear</button>
-        <button id="copy-part-btn">Copy</button>
-        <ol id="output-part-el"></ol>
+        <div>
+          <input
+            type="text"
+            name="input"
+            placeholder="Scan label here"
+            id="part-input"
+            autofocus
+          />
+          <input
+            type="text"
+            name="input"
+            placeholder="Enter KG#, AWL# or any reference here (optional)"
+            id="reference-input"
+          />
+        </div>
+        <div>
+          <button id="split-part-btn">Split</button>
+          <button id="clear-part-btn">Clear</button>
+          <button id="copy-part-btn">Copy</button>
+        </div>
+        <div>
+          <h3 id="output-part-header"></h3>
+          <table id="output-part-el"></table>
+        </div>
       </div>
       <div class="seccion crates">
         <h2>Crate ID label Splitter</h2>
-        <input type="text" name="input" value="" id="crate-input" />
+        <input
+          type="text"
+          name="input"
+          value=""
+          placeholder="Scan label here"
+          id="crate-input"
+        />
         <button id="split-crate-btn">Split</button>
         <button id="clear-crate-btn">Clear</button>
         <button id="copy-crate-btn">Copy</button>
         <ol id="output-crate-el"></ol>
       </div>
     </div>
-    <footer>Made by <a href="https://github.com/eval-u8">EV 🌊</a></footer>
+    <footer><a href="https://github.com/eval-u8">Made by EV 🌊</a></footer>
     <script src="script.js" defer></script>
   </body>
 </html>
