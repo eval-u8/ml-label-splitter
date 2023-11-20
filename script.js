@@ -57,12 +57,12 @@ const copyPart = async () => {
 copyPartBtn.addEventListener("click", copyPart);
 
 partInput.addEventListener("keydown", function (e) {
-  if (e.code === "Enter") {
+  if (e.code === "Enter" || e.code === "NumpadEnter") {
     splitPartFn(e);
   }
 });
 refInput.addEventListener("keydown", function (e) {
-  if (e.code === "Enter") {
+  if (e.code === "Enter" || e.code === "NumpadEnter") {
     splitPartFn(e);
     partInput.focus();
   }
