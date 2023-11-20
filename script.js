@@ -64,6 +64,7 @@ partInput.addEventListener("keydown", function (e) {
 refInput.addEventListener("keydown", function (e) {
   if (e.code === "Enter") {
     splitPartFn(e);
+    partInput.focus();
   }
 });
 
