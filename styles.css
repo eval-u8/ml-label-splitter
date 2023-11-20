@@ -9,10 +9,14 @@ body {
   align-items: flex-start;
 }
 
+h2 {
+  margin: 0;
+}
+
 .seccion {
   text-align: center;
   margin: 10px;
-  width: 600px;
+  min-width: 500px;
   padding: 10px 10px 30px;
   border-radius: 5px;
   border: 2px white solid;
@@ -21,7 +25,8 @@ body {
 input {
   border: 2px solid black;
   width: 50%;
-  padding: 5px 0;
+  padding: 8px;
+  margin: 5px 0;
   border-radius: 5px;
 }
 
@@ -44,9 +49,17 @@ footer {
   width: 550px;
   text-align: center;
 }
+footer a {
+  text-decoration: none;
+  color: skyblue;
+}
 
 .parts {
   background-color: lightblue;
+  width: 650px;
+}
+.parts div {
+  margin: 8px 0;
 }
 
 .crates {

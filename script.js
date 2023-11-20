@@ -3,6 +3,7 @@ const splitPartBtn = document.getElementById("split-part-btn");
 const clearPartBtn = document.getElementById("clear-part-btn");
 const copyPartBtn = document.getElementById("copy-part-btn");
 const outputPartEl = document.getElementById("output-part-el");
+const refInput = document.getElementById("reference-input");
 
 const crateInput = document.getElementById("crate-input");
 const splitCrateBtn = document.getElementById("split-crate-btn");
@@ -14,6 +15,11 @@ splitPartBtn.addEventListener("click", splitPartFn);
 
 function splitPartFn() {
   const str = partInput.value;
+  if (refInput.value) {
+    document.getElementById("output-part-header").textContent =
+      refInput.value.toUpperCase();
+    refInput.value = "";
+  }
   const str2 = str.split("|");
   if (str2.length < 2) {
     return;
@@ -34,7 +40,7 @@ function splitPartFn() {
 
 clearPartBtn.addEventListener("click", function () {
   outputPartEl.innerHTML = "";
-  // partInput.value = "";
+  document.getElementById("output-part-header").innerHTML = "";
 });
 
 const copyPart = async () => {
@@ -49,6 +55,11 @@ const copyPart = async () => {
 copyPartBtn.addEventListener("click", copyPart);
 
 partInput.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
+    splitPartFn(e);
+  }
+});
+refInput.addEventListener("keydown", function (e) {
   if (e.code === "Enter") {
     splitPartFn(e);
   }
